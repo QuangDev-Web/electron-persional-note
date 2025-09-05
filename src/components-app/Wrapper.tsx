@@ -5,6 +5,7 @@ import {
     ResizablePanelGroup,
 } from "../components/ui/resizable"
 import { WindowButtons } from "../assets/SharedComponents"
+import Editor from "./Editor"
 
 // Component này sẽ không bị render lại nếu props không thay đổi (Memo)
 export default React.memo((props: any) => {
@@ -18,9 +19,7 @@ export default React.memo((props: any) => {
                     >
                     </div>
                 </ResizablePanel>
-
                 <ResizableHandle />
-
                 <ResizablePanel minSize={30}>
                     <div
                         className=
@@ -30,6 +29,7 @@ export default React.memo((props: any) => {
                             !window.navigator.userAgent.toLowerCase().includes('mac') && <WindowButtons />
                         }
                     </div>
+                    <Editor />
                 </ResizablePanel>
             </ResizablePanelGroup>
         </div>

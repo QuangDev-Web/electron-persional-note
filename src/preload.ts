@@ -17,7 +17,7 @@ const renderer = {
         ipcRenderer.send('minimize-app')
     }
 }
-
+// Tạo key để có thể dùng được các chức năng của renderer
 contextBridge.exposeInMainWorld('electron', renderer)
 
 export type IRenderer = typeof renderer
