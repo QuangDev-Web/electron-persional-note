@@ -26,7 +26,9 @@ export default React.memo((props: any) => {
                         className=
                         "h-[40px] w-[100%] border-b-[.5px] dark:border-b-stone-800 border-b-stone-300 flex justify-end app-dragger"
                     >
-                        <WindowButtons />
+                        {
+                            !window.navigator.userAgent.toLowerCase().includes('mac') && <WindowButtons />
+                        }
                     </div>
                 </ResizablePanel>
             </ResizablePanelGroup>
