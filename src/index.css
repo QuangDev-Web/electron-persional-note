@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:is(.dark *));
+
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -47,4 +49,15 @@
         --input: 240 3.7% 15.9%;
         --ring: 240 4.9% 83.9%;
     }
+}
+
+.app-dragger {
+    /* Không thể chọn text */
+    user-select: none;
+    /* Vùng này có thể drag cửa sổ Electron */
+    -webkit-app-region: drag;
+}
+
+.app-dragger div {
+    -webkit-app-region: none !important;
 }
