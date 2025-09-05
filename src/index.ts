@@ -42,6 +42,10 @@ const createWindow = (): void => {
   ipcMain.on("minimize-app", (ev, arg) => {
     mainWindow.minimize()
   })
+
+  // ipcMain.handle("set_note", (ev, arg) => {
+
+  // })
 };
 
 // This method will be called when Electron has finished

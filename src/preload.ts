@@ -15,7 +15,12 @@ const renderer = {
     },
     minimizeApp: () => {
         ipcRenderer.send('minimize-app')
-    }
+    },
+    // set_note: async (data: any) => {
+    //     const notes = ipcRenderer.invoke('set-note', data)
+    //     console.log("notes: ", notes)
+    //     return notes
+    // }
 }
 // Tạo key để có thể dùng được các chức năng của renderer
 contextBridge.exposeInMainWorld('electron', renderer)
